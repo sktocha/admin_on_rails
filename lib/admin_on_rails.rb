@@ -1,5 +1,6 @@
 require 'pry'
 require 'admin_on_rails/version'
+require 'admin_on_rails/fields'
 require 'admin_on_rails/base_controller'
 
 module AdminOnRails

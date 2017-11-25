@@ -5,6 +5,17 @@ Rails.application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
+  # RequireReloader.watch_local_gems!
+  # RequireReloader.watch :admin_on_rails, path: '../../'
+  # config.autoload_paths += %W(/var/www/admin_on_rails/lib/admin_on_rails)
+  # RequireReloader.watch :rake
+  # config.autoload_paths += %W(/var/www/admin_on_rails/lib)
+  # config.autoload_paths += Dir["/var/www/admin_on_rails/lib/**/"]
+  # reload_gems = %w(admin_on_rails) # names of gems which should autoreload
+  # config.autoload_paths += Gem.loaded_specs.values.inject([]){ |a,gem| a += gem.load_paths if reload_gems.include? gem.name; a }
+  # require 'active_support/dependencies'
+  # ActiveSupport::Dependencies.explicitly_unloadable_constants += reload_gems.map { |gem| gem.classify }
+  # GemReloader.watch :rake
 
   # Do not eager load code on boot.
   config.eager_load = false

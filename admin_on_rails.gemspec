@@ -41,6 +41,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'bundler', '~> 1.16'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
+  spec.add_development_dependency 'slim-rails'
+  spec.add_development_dependency 'better_errors'
+  # spec.add_development_dependency 'require_reloader'
+  # spec.add_development_dependency 'gem_reloader'
 
   spec.add_development_dependency 'binding_of_caller'
   spec.add_development_dependency 'pry-rails'

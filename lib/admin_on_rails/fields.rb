@@ -1,15 +1,20 @@
 module AdminOnRails
   class Fields
-    def initialize(view_key)
-      @view_key = view_key
-      @fields = {}
+    include Enumerable
+
+    def initialize
+      @fields = []
+    end
+
+    def each(&block)
+      @fields.each(&block)
     end
 
     def field(name, options = {})
-      if @fields[name].present?
-        raise "Field with name: #{name} already exists. View name: #{@view_key}."
+      if @fields.any? { |field| field.name == name }
+        raise "Field with name: #{name} already exists."
       else
-        @fields[name] = options
+        @fields << Field.new(name, options)
       end
     end
   end

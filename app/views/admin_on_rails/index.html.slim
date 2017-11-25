@@ -1,0 +1,9 @@
+table
+  thead
+    - current_view.fields.each do |field|
+      td= field.title(resource_class)
+  tbody
+    - @collection.each do |resource|
+      tr
+        - current_view.fields.each do |field|
+          td= field.render(resource)

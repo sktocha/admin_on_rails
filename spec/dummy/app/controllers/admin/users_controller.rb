@@ -1,7 +1,8 @@
-class Admin::UsersController < AdminOnRails::BaseController
+class Admin::UsersController < AdminOnRails::ApplicationController
   view_for :index do
     field :id
-    field :name, partial: true
+    field :first_name, partial: true
+    field :last_name, partial: true
     field :email, editable: true
   end
 end
